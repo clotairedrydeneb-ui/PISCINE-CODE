@@ -13,4 +13,5 @@ Projet étudiant reproduisant la chaîne complète d'un jeu de ping-pong sur ZX8
 - Hagrid Gersone : Développeur Émulateur 
 - Elie EBAMBA : Développeur Jeu Pong
 
-## 🗂️ Structure
+## Semaine 1 : Alignement et Culture
+Voir SPECIFICATION.md pour les détails 
