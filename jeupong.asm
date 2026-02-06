@@ -1,17 +1,6 @@
- ============================================
-; PONG Z80 - Semaine 2 : Squelette de base
-; Développeur Jeu (Dev C)
-; ============================================
 
-        ORG 2000h           ; Le code commence à l'adresse 2000h
 
-; ============================================
-; SECTION DES DONNÉES (variables)
-; ============================================
-
-        ; On réserve de l'espace pour nos variables
-        ; Adresse 0x8800 et suivantes
-        ORG 8800h
+        ORG 2000h          
 
 P1Y:    DB 12      ; Position Y raquette gauche (0-23)
 P2Y:    DB 12      ; Position Y raquette droite
@@ -22,35 +11,24 @@ VY:     DB 1       ; Vitesse Y : -1=haut, 0, +1=bas
 SCORE1: DB 0       ; Score joueur 1
 SCORE2: DB 0       ; Score joueur 2
 
-; ============================================
-; SECTION DU CODE
-; ============================================
 
-        ORG 2000h           ; On retourne à l'adresse du code
 
-; -------------------------------------------------
-; POINT D'ENTRÉE DU PROGRAMME
-; -------------------------------------------------
+        ORG 2000h           
+
 START:
         ; Initialisation des variables
         CALL INIT_VARIABLES
 
         ; Boucle principale du jeu
 MAIN_LOOP:
-        ; TODO Semaine 3-4 : Lire clavier
-        ; TODO Semaine 5 : Déplacer balle
-        ; TODO Semaine 6 : Collisions
-        ; TODO Semaine 6 : Dessiner écran
 
-        ; Petite temporisation (vide pour l'instant)
+
         CALL DELAY
 
-        ; Recommencer la boucle
+    
         JP MAIN_LOOP
 
-; -------------------------------------------------
-; SOUS-ROUTINES
-; -------------------------------------------------
+
 
 ; Initialise toutes les variables
 INIT_VARIABLES:
@@ -77,22 +55,11 @@ INIT_VARIABLES:
 
         RET
 
-; Temporisation simple (vide pour l'instant)
-DELAY:
-        ; TODO Semaine 4 : Implémenter une vraie temporisation
-        RET
 
-; -------------------------------------------------
-; DONNÉES CONSTANTES
-; -------------------------------------------------
-
-; Caractères pour l'affichage (à définir plus tard)
 CHAR_RAQUETTE:  DB 'I'
 CHAR_BALLE:     DB 'O'
 CHAR_VIDE:      DB ' '
 CHAR_MUR:       DB '-'
 
-; -------------------------------------------------
-; FIN DU PROGRAMME
-; -------------------------------------------------
-        END START           ; Point d'entrée = START
+
+        END START          
